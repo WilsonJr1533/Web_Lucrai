@@ -1,0 +1,21 @@
+
+{% load static %}
+
+
+
+
+<body>
+    {% block content %}
+        <header class="main-header-container">
+            <img src="{% static 'lucai/img/logo.png' %}" alt="logo imagem" class="main-header-img">
+            <a href="/" class="main-header-link">
+                <h1 class="main-header">Lucr<strong class="main-header-strong">AI</strong></h1>
+            </a>
+            <div class="main-header-right-menu">
+                <a href="/" class="main-header-paragrafo">Home</a>
+            </div>
+        </header>
+    {% endblock %}
+</body>
+
+</html>

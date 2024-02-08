@@ -1,0 +1,43 @@
+<script src="https://kit.fontawesome.com/99714e9ee8.js" crossorigin="anonymous"></script>
+{% load static %}
+<link rel="stylesheet" href="{% static 'lucai/css/style.css' %}" class="css">
+<title>{% block title %} Dashboard{% endblock title %} </title>
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'lucai/img/logo.png' %}">
+
+
+<body class="dashboard-page">
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="{% static 'lucai/img/logo.png'%}" alt="logo imagem" class="dashboard-image">
+        </div>
+        <div class="icons-container">
+            <i class="fa-regular fa-bell fa-2xl icon"></i>
+            <i class="fa-solid fa-gear fa-2xl icon"></i>
+            <i class="fa-solid fa-right-from-bracket fa-2xl icon"></i>
+        </div>
+    </div>
+   
+   
+    <div class="welcome-container">
+         <div class="welcome-message">
+            <h2>Olá, {{ user.get_username }} !</h2>
+            <h3>Bem-vindo à revolução das finanças.</h3>
+            <p>Transformando sonhos em realidade, um <br> orçamento de cada vez.</p>
+        </div>
+    </div>
+
+    <div class="search-container">
+            <form action="" class="search-form">
+                <input type="search" class="search-input" name="search" placeholder="Digite para pesquisar...">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+    </div>
+    
+    
+    
+    
+</body>
+
+
+

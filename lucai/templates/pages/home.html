@@ -1,0 +1,134 @@
+{% include "global/partials/head.html" %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'lucai/css/style.css' %}" class="css">
+<title>{% block title %}{% endblock title %} Lucrai</title>
+
+<body>
+    <header class="main-header-container">
+        <img src="{% static 'lucai/img/logo.png'%}" alt="logo imagem" class="main-header-img">
+        <a href="/" class="main-header-link">
+            <h1 class="main-header">Lucr<strong class="main-header-strong">AI</strong></h1>
+        </a>
+        <div class="main-header-right-menu">
+            <a href="/" class="main-header-paragrafo">Planos</a>
+        </div>
+        <div class="main-header-right-menu">
+            <a href="authors/register/" class="main-header-conta">Criar Conta</a>
+        </div>
+    </header>
+
+    <main class="">
+        
+        <div class="main-main-container">
+            <h1 class="main-titulo">Melhorando suas finanças com IA
+                <p class="main-paragrafo">Sua rota para o sucesso financeiro!</p>
+                <a href="authors/register/" class="main-paragrafo-button">Assinar agora!</a>
+            </h1>
+
+            <img src="{% static 'lucai/img/computador1.png'%}" class="main-img" alt="pessoa com computador">
+        </div>
+
+        <div class="main-corpo-container">
+            <img src="{% static 'lucai/img/avatar.png' %}" class="main-corpo-img" alt="mulher com tablet">
+            <h1 class="main-titulo-corpo">Diagnóstico Financeiro Personalizado: Analisando seus Hábitos de Gastos
+                <p class="main-paragrafo">Descubra como a inteligência artificial pode examinar detalhadamente seus
+                    padrões de consumo para identificar áreas de oportunidade, proporcionando um diagnóstico financeiro
+                    personalizado.
+                </p>
+                <a href="/" class="main-paragrafo-button">Saber Mais</a>
+
+            </h1>
+        </div>
+
+        <div class="main-corpo-section">
+            <h2 class="main-titulo-section">Investimentos Personalizados: Maximizando Retornos de Acordo com Seu Perfil
+            </h2>
+            <p class="main-paragrafo-section">Descubra como a IA utiliza algoritmos preditivos para sugerir
+                oportunidades de investimento adaptadas ao seu apetite de risco, objetivos financeiros e as condições do
+                mercado, proporcionando uma estratégia de investimento personalizada</p>
+        </div>
+
+        <div>
+            <ul class="main-corpo-lista">
+                <li class="main-corpo-lista-lista">
+                    <img src="{% static 'lucai/img/icone_perfil.png '%}" class="main-corpo-section-img">
+                    <p class="main-corpo-titulo">Identificação do Perfil de Investidor</p>
+                    <p class="main-corpo-paragrafo">A IA analisa seu perfil de investidor, considerando fatores como
+                        aversão ao risco, horizonte de investimento e metas financeiras de longo prazo.</p>
+                </li>
+
+                <li class="main-corpo-lista-lista">
+
+                    <img src="{% static 'lucai/img/icone_predio.png '%}" class="main-corpo-section-img">
+                    <p class="main-corpo-titulo">Diversificação Inteligente</p>
+                    <p class="main-corpo-paragrafo">A inteligência artificial sugere estratégias de diversificação de
+                        portfólio para otimizar retornos e minimizar riscos, levando em consideração a variedade de
+                        ativos e classes de investimento disponíveis.</p>
+                </li>
+
+                <li class="main-corpo-lista-lista">
+                    <img src="{% static 'lucai/img/icone_mao.png' %}" class="main-corpo-section-img">
+                    <p class="main-corpo-titulo">Acompanhamento Contínuo</p>
+                    <p class="main-corpo-paragrafo">Saiba como a inteligência artificial monitora continuamente o
+                        desempenho de seus investimentos, fornecendo atualizações e ajustes conforme necessário para
+                        maximizar os retornos e proteger seu patrimônio.</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="main-corpo-container">
+            <img src="{% static 'lucai/img/pana.png' %}" class="main-corpo-img" alt="mulher mexendo no celular">
+            <h1 class="main-titulo-corpo">Otimizando sua Saúde Financeira: Reduzindo Despesas e Consolidando Dívidas
+                <p class="main-paragrafo">Explore estratégias personalizadas para reduzir gastos desnecessários e
+                    melhorar sua saúde financeira global, com sugestões específicas para otimizar seus recursos e
+                    consolidar dívidas de forma eficiente.
+                </p>
+                <a href="/" class="main-paragrafo-button">Saber Mais</a>
+
+            </h1>
+        </div>
+
+        <div>
+            <h2 class="main-titulo-section"> Aprendizado Contínuo para Sucesso Financeiro Duradouro</h2>
+            <p class="main-paragrafo-section"> Descubra como essa capacidade dinâmica da IA contribui para o sucesso
+                financeiro duradouro do usuário.</p>
+        </div>
+
+        <ul class="main-corpo-lista-section">
+            <li class="main-corpo-lista-lista">
+                <img src="{% static 'lucai/img/pessoa_notebook.png' %}" class="main-corpo-img-lista"
+                    alt="pessoa com notebook">
+                <p class="main-corpo-lista-texto">Adaptação às Mudanças Pessoais:</p>
+            </li>
+
+            <li class="main-corpo-lista-lista">
+                <img src="{% static 'lucai/img/computador_lista.png' %}" class="main-corpo-img-lista"
+                    alt="pessoa com notebook 2">
+                <p class="main-corpo-lista-texto1">Feedback do usuário:</p>
+            </li>
+            <li class="main-corpo-lista-lista">
+                <img src="{% static 'lucai/img/computador_lista2.png' %}" class="main-corpo-img-lista"
+                    alt="pessoa com notebook 3">
+                <p class="main-corpo-lista-texto2">Atualizações de Mercado em Tempo Real</p>
+            </li>
+        </ul>
+        
+    </main>
+
+    <footer class="main-rodape">
+        <div class="main-rodape-rodape">
+            <img src="{% static 'lucai/img/logo.png'%}" class="main-rodape-logo">
+            <p class="main-rodape-nome-logo">Lucr<strong class="main-header-strong">AI</strong></p>
+            <p class="main-rodape-texto">LucrAI © 2024 - Potencializando Seu Futuro Financeiro com Inteligência
+                Artificial.
+            </p>
+            <p class="main-rodape-texto-texto">Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+   
+</body>
+
+</html>

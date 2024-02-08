@@ -1,0 +1,16 @@
+<!-- templates/pages/adicionar_transacao.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Transação</title>
+</head>
+<body>
+    <h2>Adicionar Transação</h2>
+    <form method="post" action="{% url 'adicionar_transacao' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Adicionar Transação</button>
+    </form>
+    <a href="{% url 'grafico' %}">Voltar para o Gráfico</a>
+</body>
+</html>

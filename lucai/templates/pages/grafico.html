@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gráfico Financeiro</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'lucai/img/logo.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #content {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        #graficoFinanceiro {
+            margin-bottom: 20px;
+        }
+
+        .info-container {
+            border-radius: 2rem;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            margin-top: 10rem;
+        }
+
+
+        .back-link {
+            margin-top: 10rem;
+
+
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mpld3@0.5.5/dist/mpld3.min.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <a href="{% url 'dashboard' %}" class="back-link">&#8249; Voltar para o Dashboard</a>
+
+        {{ grafico_html | safe }}
+
+        <form method="post" action="{% url 'adicionar_transacao' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Adicionar Transação</button>
+        </form>
+
+        <form method="post" action="{% url 'grafico' %}">
+            {% csrf_token %}
+            <input type="hidden" name="remover_transacoes" value="true">
+            <button type="submit" name="limpar_grafico">Limpar Transações</button>
+        </form>
+
+        <div class="info-container">
+            <h2>Resumo Financeiro</h2>
+            <p>Total Despesas: {{ grafico_data.total_despesas }}</p>
+            <p>Total Receitas: {{ grafico_data.total_receitas }}</p>
+            <p>Déficit/Superávit: {{ grafico_data.deficit }}</p>
+
+            <h3>Transações:</h3>
+            <ul>
+                {% for descricao, valor in grafico_data.transacoes %}
+                <li>{{ descricao }}: {{ valor }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Certifique-se de que o mpld3 esteja disponível antes de chamar o código a seguir
+        mpld3.draw_figure("graficoFinanceiro", {{ grafico_id| safe }});
+    </script>
+</body>
+
+</html>
